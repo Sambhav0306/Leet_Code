@@ -1,3 +1,4 @@
+//Question 2455 https://leetcode.com/problems/average-value-of-even-numbers-that-are-divisible-by-three/
 public class Day7_2455 {
     public static void main(String[] args){
         int [] arr=new int[]{1,6,5};
