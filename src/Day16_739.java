@@ -1,23 +1,22 @@
 import java.util.*;
 public class Day16_739 {
-    int[] dailyTemperatures(int[] temperatures) {
-        Stack<Integer> s = new Stack<>();
-        int n = temperatures.length;
-        int[] result = new int[n];
-        // move from right to left
-        for (int i = n - 1; i >= 0; i--) {
-            // pop all the indices with lower or equal temperature
-            while (!s.isEmpty() && temperatures[i] >= temperatures[s.peek()]) {
-                s.pop();
-            }
-            // this means the next warmer temperature exists!
-            if (!s.isEmpty()) {
-                result[i] = s.peek() - i; // distance between next greater and current
-            }
-            // insert current index to the stack
-            s.push(i);
-        }
-        return result;
+    public static void main(String[] args) {
+        int[] arr=new int[]{73,74,75,71,69,72,76,73};
+        System.out.println(Arrays.toString(dailyTemperatures(arr)));
     }
+    static int[] dailyTemperatures(int[] arr) {
+        Stack<Integer> stack=new Stack<>();
+        int[] nums=new int[arr.length];
+        for(int i=0;i<arr.length;i++){
+            if(!stack.isEmpty() && arr[i]>arr[stack.peek()]){
+                while(!stack.isEmpty() && arr[i]>arr[stack.peek()]){
+                    nums[stack.peek()]=i-stack.peek();
+                    stack.pop();
+                }
+            }
+            stack.push(i);
+        }
+
+        return nums;
 }
 }
