@@ -1,4 +1,4 @@
-import java.util.*
+import java.util.*;
 public class Day17 {
     static int[] successfulPairs(int[] spells, int[] potions, long success) {
         Arrays.sort(potions);
