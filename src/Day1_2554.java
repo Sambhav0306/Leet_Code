@@ -5,7 +5,7 @@ public class Day1_2554 {
             int [] arr=new int[]{1,6,5};
             System.out.println(findLonely(arr,5,6));
         }
-    static  int findLonely(int[] banned,int n,int maxSum) {
+    static   int findLonely(int[] banned,int n,int maxSum) {
         int count=0;
         int sum=0;
         Arrays.sort(banned);
