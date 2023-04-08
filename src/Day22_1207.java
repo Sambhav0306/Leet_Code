@@ -1,3 +1,4 @@
+import java.util.*;
 public class Day22_1207 {
     class Solution {
         public List<String> findAndReplacePattern(String[] words, String pattern) {
