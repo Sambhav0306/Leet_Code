@@ -1,33 +1,17 @@
 import java.util.*;
 public class Day32_2244 {
     public static void main(String[] args){
-        int [] arr=new int[]{9,9,11,9,22,22,11,552,22,22,55};
-        System.out.println(minimumRounds(arr));
+        int [] arr=new int[]{3,2,1,2,1,7};
+        System.out.println(minIncrementForUnique(arr));
     }
-    static int minimumRounds(int[] task) {
-        Arrays.sort(task);
+    static int minIncrementForUnique(int[] nums) {
+        Arrays.sort(nums);
         int count=0;
-        int j=1;
-        for(int i=0;i<task.length;i++){
-            j=i+1;
-            int counter=1;
-            while(j<task.length && task[i]==task[j]){
-                j++;
-                counter++;
+        for(int i=0;i<nums.length-1;i++){
+            if(nums[i]==nums[i+1]){
+                nums[i+1]=nums[i+1]+1;
+                count++;
             }
-            if(counter==1){
-                return -1;
-            }
-            while(counter!=0){
-                if(counter%3==0){
-                    count++;
-                    counter=counter-3;
-                }else{
-                    count++;
-                    counter=counter-2;
-                }
-            }
-            i=j-1;
         }
         return count;
     }
