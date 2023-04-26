@@ -3,9 +3,9 @@ public class Day40_2336 {
     int min = 1;
     PriorityQueue<Integer> pq;
 
-    public SmallestInfiniteSet() {
-        pq = new PriorityQueue<>();
-    }
+//    public SmallestInfiniteSet() {
+//        pq = new PriorityQueue<>();
+//    }
 
     public int popSmallest() {
         if(!pq.isEmpty()){
