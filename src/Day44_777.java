@@ -4,7 +4,7 @@ public class Day44_777 {
         String e="L";
         System.out.println(canTransform(s,e));
     }
-    staticboolean canTransform(String start, String end) {
+    static boolean canTransform(String start, String end) {
 
         int p1=0, p2=0;
 
