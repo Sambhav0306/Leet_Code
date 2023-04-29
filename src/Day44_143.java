@@ -29,4 +29,4 @@ public class Day44_143 {
         return size;
     }
 }
-}
+
