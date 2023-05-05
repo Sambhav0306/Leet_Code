@@ -1,6 +1,6 @@
 public class Day52_28 {
 
-}
+
     int strStr(String haystack, String needle) {
         int haylength=haystack.length();
         int needlelength=needle.length();
