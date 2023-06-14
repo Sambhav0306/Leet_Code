@@ -16,8 +16,7 @@
 class Solution {
     public int getMinimumDifference(TreeNode root) {
      ArrayList<Integer> list=new ArrayList<>();
-     preorder(root,list);
-        Collections.sort(list);
+     inorder(root,list);
         int min=100000;
         for(int i=0;i<list.size()-1;i++){
             if(min>list.get(i+1)-list.get(i)){
@@ -26,12 +25,12 @@ class Solution {
         }
         return min;
     }
-    private void preorder(TreeNode root,ArrayList<Integer> list){
+    private void inorder(TreeNode root,ArrayList<Integer> list){
         if(root==null){
             return;
         }
+        inorder(root.left,list);
         list.add(root.val);
-        preorder(root.left,list);
-        preorder(root.right,list);
+        inorder(root.right,list);
     }
 }
