@@ -7,12 +7,8 @@ class Solution {
         for(int i=0;i<c;i++){
             for(int j=0;j<r;j++){
                 if(matrix[i][j]==0){
-                    if(!col.contains(i)){
                         col.add(i);
-                    }
-                    if(!row.contains(j)){
                         row.add(j);
-                    }
                 }
             }
         }
