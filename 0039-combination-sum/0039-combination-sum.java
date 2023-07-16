@@ -15,11 +15,10 @@ class Solution {
             if(candidates[i]>target){
                 break;
             }
-            if(target-candidates[i]>=0){
                 list1.add(candidates[i]);
                 f(candidates,target-candidates[i],i,list1);
                 list1.remove(list1.size()-1);
-            }
+                // f(candidates,target,i+1,list1);
         }
     }
 }
