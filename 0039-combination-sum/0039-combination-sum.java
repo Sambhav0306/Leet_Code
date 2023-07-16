@@ -7,18 +7,20 @@ class Solution {
         return list;
     }
     public void f(int[] candidates,int target,int ind,ArrayList<Integer> list1){
+        if(ind==candidates.length){
+            return;
+        }
         if(target==0){
             list.add(new ArrayList<>(list1));
             return;
         }
-        for(int i=ind;i<candidates.length;i++){
-            if(candidates[i]>target){
-                break;
+        // for(int i=ind;i<candidates.length;i++)
+            if(candidates[ind]>target){
+                return;
             }
-                list1.add(candidates[i]);
-                f(candidates,target-candidates[i],i,list1);
+                list1.add(candidates[ind]);
+                f(candidates,target-candidates[ind],ind,list1);
                 list1.remove(list1.size()-1);
-                // f(candidates,target,i+1,list1);
-        }
+                f(candidates,target,ind+1,list1);
     }
 }
