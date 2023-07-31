@@ -42,21 +42,5 @@ class Solution {
         }
         return head.next;
     }
-     public ListNode reverse(ListNode head) {
-        if(head==null){
-            return head;
-        }
-        ListNode prev=null;
-        ListNode curr=head;
-        ListNode fut=head.next;
-        while(curr!=null){
-            curr.next=prev;
-            prev=curr;
-            curr=fut;
-            if(fut!=null){
-               fut=fut.next;
-            }
-        }
-        return prev;
-    }
+
 }
