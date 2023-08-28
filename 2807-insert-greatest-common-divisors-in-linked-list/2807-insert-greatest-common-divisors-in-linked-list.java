@@ -21,16 +21,12 @@ class Solution {
         }
         return head;
     }
-    public int gcd(int curr,int next){
-        int max=Math.max(curr,next);
-        int min=Math.min(curr,next);
-        if(max%min==0) return min;
-        int i=min;
-        while(i!=1){
-            if(max%i==0 && min%i==0) return i;
-            // max=max/i;
-            i--;
+    public int gcd(int a,int b){
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
         }
-        return 1;
+        return a;
     }
 }
