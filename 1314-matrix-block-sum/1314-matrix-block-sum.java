@@ -16,7 +16,7 @@ class Solution {
              nums[i][j]=sum;
          }
      }  
-        int[][] ans=new int[nums.length][nums[0].length];
+        // int[][] ans=new int[nums.length][nums[0].length];
     for(int i=0;i<nums.length;i++){
         for(int j=0;j<nums[0].length;j++){
             int sum=0;
@@ -29,9 +29,9 @@ class Solution {
                      sum+=nums[a][j];
                  }
              }
-             ans[i][j]=sum;
+             mat[i][j]=sum;
          }
     }
-        return ans;
+        return mat;
     }
 }
