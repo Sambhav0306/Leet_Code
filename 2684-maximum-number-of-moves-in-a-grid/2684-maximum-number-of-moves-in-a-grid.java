@@ -1,11 +1,11 @@
 class Solution {
     public int maxMoves(int[][] grid) {
         int max=0;
-        for(int i=0;i<grid.length;i++){
-            int[][] dp=new int[grid.length][grid[0].length];
+        int[][] dp=new int[grid.length][grid[0].length];
             for(int j=0;j<grid.length;j++){
                 Arrays.fill(dp[j],-1);
             }
+        for(int i=0;i<grid.length;i++){
             max=Math.max(max,f(i,0,grid,dp));
         }
         return max;
